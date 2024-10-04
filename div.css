@@ -1,6 +1,6 @@
-body{
+/* body{
     background-color: red;
-}
+} */
 .container{
     background-color: blue;
     height: 300px;
@@ -8,9 +8,16 @@ body{
     margin: 50px;
 }
 
-.child{
+/* .child{
     background-color: green;
     margin: 50px;
     height: 100px;
     border-radius: 50%;
+} */
+body{
+    background-color: teal;
+}
+
+.div>p{
+    background-color: yellow;
 }
