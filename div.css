@@ -9,19 +9,22 @@ body{
     box-sizing: border-box;
 }
 .child1,.child2,.child3,.child4{
-    height: 50px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     border: 2px dotted goldenrod;
-    display: inline-block;
+    display: flex;  
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-grow: initial;
 }
 .child1{
-    background-color: azure;
+    background-color: orangered;
 }
 .child2{
-    background-color: blueviolet;
+    background-color: blue;
 }
 .child3{
-    background-color: blanchedalmond;
+    background-color: greenyellow;
 }
 .child4{
     background-color:yellowgreen;
