@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(233, 239, 239);
+}
+
+.container {
+    background-color: rgb(226, 129, 9);
+    height: 400px;
+    border: 2px solid red;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Adds equal space between child elements */
+    align-items: center; 
+}
+
+.child1, .child2, .child3, .child4 {
+    background-color: rgb(226, 43, 128);
+    height: 200px;
+    width: 200px;
+    border: 2px dotted red;
+    display: flex; 
+    
+    color: white;
+}
+
+.child1 {
+    background-color: aquamarine;
+}
+
+.child2 {
+    background-color: blueviolet;
+}
+
+.child3 {
+    background-color: chocolate;
+}
+
+.child4 {
+    background-color: coral;
+}

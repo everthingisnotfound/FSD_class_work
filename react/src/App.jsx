@@ -1,54 +1,71 @@
-import React, { useState } from 'react'
-import './image.css';
-import cat from './cat3.jpg';
-function ImageManipulation() {
-  const [height, setHeight] = useState(100)
-  const [width, setWidth] = useState(100)
-  const [red, setRed] = useState(255);
-  const [green, setGreen] = useState(255);
-  const [blue, setBlue] = useState(255);
-  const [imgrotate, setImgRotate] = useState(0);
+import React, { useState } from "react";
+import { saveUserData } from "./component/data";
+import "./App.css";
 
-  function enhanceheight() {
-    setHeight(height + 20);
-  }
-  function enhanceWidth() {
-    setWidth(width + 20);
-  }
+const App = () => {
+  const [user, setUser] = useState({ name: "", email: "", password: "" });
+  const [isRegistered, setIsRegistered] = useState(false);
 
-  function changeColor() {
-    setRed(Math.random() * 255);
-    setGreen(Math.random() * 255);
-    setBlue(Math.random() * 255);
-  }
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
 
-
-  function imageRotate() {
-    setImgRotate(imgrotate+30);
-  }
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    saveUserData(user);
+    setIsRegistered(true);
+  };
 
   return (
-    <div className='imageCard'>
-
-      <div className='catdiv' style={{ backgroundColor: `RGB(${red},${green},${blue})` }}>
-        <img src={cat} height={height} width={width}  style={{transform:`rotate(${imgrotate}deg)`}} alt='cat Image' />
-      </div>
-      <div className='buttondiv'>
-
-        <button onClick={enhanceheight} style={{ backgroundColor: 'orange' }} >Enhance Height</button>
-        &nbsp;  &nbsp;  &nbsp;  &nbsp;
-        <button onClick={enhanceWidth} style={{ backgroundColor: 'green' }}>Enhance Width</button>
-        <br></br>
-        &nbsp;
-        <button onClick={imageRotate} >Image Rotate</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button onClick={changeColor} >Color Change</button>
-      </div>
-
-
+    <div className="app-container">
+      {!isRegistered ? (
+        <div className="registration-page">
+          <h2>Register</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={user.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={user.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={user.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      ) : (
+        <div className="welcome-page">
+          <h2>Welcome, {user.name}!</h2>
+          <p>You have successfully registered.</p>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default ImageManipulation
+export default App;
