@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "age": 20,
+      "grade": "A",
+      "major": "Computer Science"
+    },
+    {
+      "id": 2,
+      "name": "Brian Smith",
+      "age": 21,
+      "grade": "B+",
+      "major": "Mathematics"
+    },
+    {
+      "id": 3,
+      "name": "Catherine Lee",
+      "age": 19,
+      "grade": "A-",
+      "major": "Biology"
+    },
+    {
+      "id": 4,
+      "name": "Daniel Kim",
+      "age": 22,
+      "grade": "B",
+      "major": "Chemistry"
+    },
+    {
+      "id": 5,
+      "name": "Emily Davis",
+      "age": 20,
+      "grade": "A",
+      "major": "English Literature"
+    },
+    {
+      "id": 6,
+      "name": "Franklin Moore",
+      "age": 23,
+      "grade": "B-",
+      "major": "History"
+    },
+    {
+      "id": 7,
+      "name": "Grace Hall",
+      "age": 21,
+      "grade": "A+",
+      "major": "Physics"
+    },
+    {
+      "id": 8,
+      "name": "Henry Clark",
+      "age": 20,
+      "grade": "B+",
+      "major": "Economics"
+    },
+    {
+      "id": 9,
+      "name": "Isabella Scott",
+      "age": 19,
+      "grade": "A-",
+      "major": "Political Science"
+    },
+    {
+      "id": 10,
+      "name": "Jacob Martinez",
+      "age": 22,
+      "grade": "B",
+      "major": "Engineering"
+    }
+  ]
+  
